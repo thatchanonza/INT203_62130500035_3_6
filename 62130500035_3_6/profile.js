@@ -28,7 +28,7 @@ const app = Vue.createApp({
             firstname: null,
             lastname: null,
             email: null,
-            message: null,
+            message: "Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Utenim ad minim veniam",
             errors: null,
             alert: false,
         }
@@ -43,6 +43,7 @@ const app = Vue.createApp({
                 constraints)
 
             if (!this.errors) {
+                alert("Your profile is updated successfully.")
                 this.alert = true
             }
             else if (this.errors) {
