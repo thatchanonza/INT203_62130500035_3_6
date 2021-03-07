@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Vue Js - HelloWorld App</title>
+
+    <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+    <!-- Using via Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- https://tailwindcss.com/docs/installation -->
+    <!-- Using Tailwind via CDN -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+    <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <nav class="flex justify-between items-center border-b px-16 py-4 shadow-lg">
+            <!--Logo-->
+            <div class="flex justify-between">
+                <h1 class="text-2xl text-gray-700">
+                    <a class=" text-gray-600 hover:text-black" href="#">
+                        Site Title
+                    </a>
+                </h1>
+            </div>
+
+            <!--global navigattion-->
+            <div class="flex items-center ">
+                <a class="ml-12 block text-lg hover:underline text-gray-700 hover:text-black" href="#home">Home</a>
+                <a class="ml-12 block text-lg hover:underline text-gray-700 hover:text-black" href="#about">About</a>
+                <a class="ml-12 block text-lg hover:underline text-gray-700 hover:text-black"
+                    href="#service">Services</a>
+                <a class="ml-12 block text-lg hover:underline text-gray-700 hover:text-black"
+                    href="#portfolio">Portfolio</a>
+                <a class="ml-12 block text-lg hover:underline text-gray-700 hover:text-black "
+                    href="#contact">Contact</a>
+            </div>
+
+        </nav>
+
+        <!--Home-->
+        <header class="flex justify-center items-center px-32 py-12 bg-gradient-to-b from-indigo-100 to-blue-200"
+            id="home">
+            <div class="rounded-full border-2 border-black">
+                <ul class="list-reset ">
+                    <li class="m-2">
+                        <a href="#"
+                            class="border-2 border-black rounded-full block p-1 text-gray-700 text-center font-bold">FB</a>
+                    </li>
+                    <li class="m-2">
+                        <a href="#"
+                            class="border-2 border-black rounded-full block p-1 text-gray-700 text-center font-bold">IG</a>
+                    </li>
+                    <li class="m-2">
+                        <a href="#"
+                            class="border-2 border-black rounded-full block p-1 text-gray-700 text-center font-bold">LK</a>
+                    </li>
+                    <li class="m-2">
+                        <a href="#"
+                            class="border-2 border-black rounded-full block p-1 text-gray-700 text-center font-bold">T</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative box-border px-16">
+                <p class="text-3xl font-bold text-blue-700">Hello I'm</p>
+                <p class="pt-2 text-4xl font-bold text-black">{{ firstname }} {{ lastname }}</p>
+                <p class="leading-relaxed text-xs py-4 text-gray-700 text-left max-w-lg">"Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+                <button class="bg-blue-300 rounded mt-4 px-8 py-3">
+                    <p class="font-semibold">Hire Me</p>
+                </button>
+            </div>
+            <div class="box-border ml-8">
+                <img class=" max-h-96 object-cover" src="./images/profilePhoto.jpg">
+            </div>
+        </header>
+
+        <div class="bg-gradient-to-b from-indigo-200 to-blue-100 py-24">
+            <div
+                class="max-w-screen-xl  px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-between">
+                    <div class="pr-10">
+                        <h2 class="text-4xl lg:text-5xl font-bold leading-tight">Contact Info</h2>
+                        <div class="contactinfo">
+                            <div>
+                                <ul class="text-gray-700">
+                                    <li class="mt-8">
+                                        <span class="material-icons mr-2 text-3xl align-middle">location_on</span>
+                                        <span
+                                            class="text-xs lg:text-base font-semibold leading-loose text-gray-700 align-center">11/1
+                                            My Press2 Room2201 Floor2 Villege No.1, Soi Pracha Uthit45, Bangmod
+                                            Sub-district,
+                                            Thung Khru District, Bangkok, 10140</span>
+                                    </li>
+                                    <li class="mt-4">
+                                        <span class="material-icons mr-2 text-3xl align-middle">email</span>
+                                        <span
+                                            class="text-xs lg:text-base font-semibold leading-tight text-gray-700 align-center">thatchanon3223@gmail.com</span>
+                                    </li>
+                                    <li class="mt-4">
+                                        <span class="material-icons mr-2 text-3xl align-middle">perm_phone_msg</span>
+                                        <span
+                                            class="text-xs lg:text-base font-semibold leading-tight text-gray-700 align-center">(+66)
+                                            84-769-3088</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="text-gray-700 mt-8">
+                            Hate forms? Send us an <span class="underline">email</span> instead.
+                        </div>
+                    </div>
+                </div>
+
+                <form @submit.prevent="checkForm">
+                    <div>
+                        <span class="text-red-500">
+
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-4">
+                        <div class="">
+                            <span class="uppercase text-sm text-gray-600 font-bold">First Name</span>
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                v-if="!errors" type="text" v-model="firstname" name="firstname" placeholder="Firstname">
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"
+                                v-if="errors" type="text" v-model="firstname" name="firstname" placeholder="Firstname">
+                            <span v-if="errors"
+                                class="uppercase text-xs text-red-400 font-semibold">{{ errors.firstname }}</span>
+                        </div>
+                        <div>
+                            <span class="uppercase text-sm text-gray-600 font-bold">Last Name</span>
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                v-if="!errors" type="text" v-model="lastname" name="lastname" placeholder="Lastname">
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"
+                                v-if="errors" type="text" v-model="lastname" name="lastname" placeholder="Lastname">
+                            <span v-if="errors"
+                                class="uppercase text-xs text-red-400 font-semibold">{{ errors["lastname"] }}</span>
+                        </div>
+                        <div class="mt-8 col-span-2">
+                            <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                                v-if="!errors" type="text" id="email" v-model="email" name="email" placeholder="Email">
+                            <input
+                                class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline border-2 border-red-500"
+                                v-if="errors" type="text" id="email" v-model="email" name="email" placeholder="Email">
+                            <span v-if="errors"
+                                class="uppercase text-xs text-red-400 font-semibold">{{ errors.email }}</span>
+                        </div>
+                        <div class="mt-8 col-span-2">
+                            <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
+                            <textarea id="message" v-model="message" name="message" placeholder="Message"
+                                class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline "></textarea>
+                        </div>
+                        <div class="mt-8">
+                            <input type="submit" value="send"
+                                class="px-8 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            <div class="alertbar">
+                <div class="successAlert">
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 fixed bottom-0 right-0 mr-8 mb-12 w-1/5"
+                        role="alert" v-show="alert">
+                        <p class="font-bold">Submit sent</p>
+                        <button class="material-icons text-green-800 text-white p-2 mx-2 absolute top-1 right-0"
+                            @click="toggleAlert">close</button>
+                        <p>Your profile is updated
+                            successfully.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- my main.js -->
+        <script src=" ./profile.js"> </script>
+</body>
+
+</html>
